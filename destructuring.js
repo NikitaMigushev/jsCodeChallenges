@@ -61,5 +61,23 @@ const {nameF, ...best} = hero3;
 
 console.log(nameF + " " + JSON.stringify(hero3, null, 2))
 
+function storeOrder({id, currency}) { // object with props id, currency is expected as input
+    // object props are destructed and assigned to variables id and currency
+    localStorage.setItem('id', id);
+    localStorage.setItem('currency', currency);
+}
+
+const orderData = {
+    id: 123,
+    currency: 'USD'
+}
+
+storeOrder(orderData)
+
+console.log(localStorage.id);
+console.log(localStorage.currency);
+
+
+
 
 
